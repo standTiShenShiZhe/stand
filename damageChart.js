@@ -148,7 +148,7 @@ var stand = new Vue({
             setTimeout(function(){
                 _this.chartPie = echarts.init(pie);
                 _this.chartPie.setOption(option2);
-            })
+            },300)
         },
         damageInit: function(){
             chart = this.$refs['mycharts'];
