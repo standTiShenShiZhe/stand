@@ -6,9 +6,9 @@
 #chart2 {
     box-sizing: border-box;
     width: 100%;
-    height: 10rem;
-    margin-top: .4rem;
+    height: 12rem;
     padding: .2rem;
+    margin-top: .5rem;
 }
 .photo {
     padding: .5rem .5rem .2rem;
@@ -41,7 +41,12 @@
     margin: 0;
     height: .8rem;
     border-radius: .1rem;
+    margin-right: .2rem;
 }
 .tool select option {
     text-align: center;
+}
+.totle {
+    padding: .3rem .3rem .2rem;
+    text-align: center
 }

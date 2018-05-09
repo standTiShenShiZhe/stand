@@ -101,9 +101,12 @@ var stand = new Vue({
       myChart: {},
       chartPie: '',
       option: ID,
+      rbq: ['祈愿','雨落音','DIO','量子蜜柑','卡兹de兜裆裤','哒哒哒赛','天暮','仮初',],
       pieData:[],
       pieItem:{},
-      pieKey:[]
+      pieKey:[],
+      totle:0,
+      name:''
     },
     mounted : function(){
         this.$nextTick(function () {
@@ -133,6 +136,7 @@ var stand = new Vue({
                         break;
                     }
                 }
+                this.name = ele.target.value;
                 this.echartsPieInit(this.pieData,ele.target.value,this.pieKey);
             }else {
                 this.damageInit();
@@ -140,6 +144,11 @@ var stand = new Vue({
         },
         echartsPieInit:function(data,name,pieKey){
             console.log(data)
+            this.totle = 0;
+            for (let i = 0; i < data.length; i++) {
+                const element = data[i]['value'];
+                this.totle += Number(element);
+            }
             option2.series[0]['data'] = data;
             option2['title']['subtext'] = name;
             option2['legend']['data'] = pieKey;

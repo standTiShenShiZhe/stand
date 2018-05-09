@@ -27,6 +27,12 @@
             </div>
             <div class="tool">
                 <select v-model="select"  @change="selectVal">
+                    <option value="all">会长的rbq</option>
+                    <template  v-for="item in rbq">
+                        <option v-model="item">{{item}}</option>
+                    </template>
+                </select>
+                <select v-model="select"  @change="selectVal">
                     <option value="all">全部</option>
                     <template  v-for="item in option">
                         <option v-model="item">{{item}}</option>
@@ -36,6 +42,7 @@
         </div>
         <div id="chart" v-show="select == 'all'" ref="mycharts"></div>
         <div id="chart2" v-show="select != 'all'" ref="myPieCharts"></div>
+        <p class="totle" v-show="select != 'all'"><b :style="{color:'rgb(52, 200, 206)'}">{{name}}</b> 当前总分：<b :style="{color:'rgb(212, 59, 88)'}">{{totle}}</b></p>
     </div>
     <script src="damageChart.js"></script>
 </body>
