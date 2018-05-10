@@ -46,6 +46,7 @@ var option = {
         left: '3%',
         right: '4%',
         bottom: '3%',
+        top:'5%',
         containLabel: true
     },
     xAxis:  {
@@ -69,8 +70,9 @@ var option2 = {
         formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
     legend: {
-        orient: 'vertical',
-        left: 'left',
+        orient: 'horizontal',
+        top: 60,
+        center: 'center',
         data: []
     },
     series : [
@@ -78,7 +80,7 @@ var option2 = {
             name: '工会战积分统计',
             type: 'pie',
             radius : '55%',
-            center: ['50%', '60%'],
+            center: ['50%', '65%'],
             data:[
                 
             ],
