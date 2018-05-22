@@ -156,10 +156,15 @@ var stand = new Vue({
             option2['legend']['data'] = pieKey;
             var pie = this.$refs['myPieCharts'];
             var _this = this;
-            setTimeout(function(){
+            this.$nextTick(function(){
                 _this.chartPie = echarts.init(pie);
                 _this.chartPie.setOption(option2);
-            },300)
+            })
+          
+            // setTimeout(function(){
+            //     _this.chartPie = echarts.init(pie);
+            //     _this.chartPie.setOption(option2);
+            // },300)
         },
         damageInit: function(){
             chart = this.$refs['mycharts'];
